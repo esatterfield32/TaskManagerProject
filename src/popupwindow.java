@@ -12,12 +12,11 @@
 		public JButton highPriority;
 		public JButton mediumPriority;
 		public JButton lowPriority;
-		public static boolean high = false;
-		public static boolean medium = false;
-		public static boolean low = false;
 		public static String taskValue;
 		private JTextField taskName;
+		public static String priorityState;
 		public popupwindow() {
+			
 			setLayout(new FlowLayout());
 			instructions  = new JLabel("Add the Task by typing it below and clicking done.");
 			add(instructions);
@@ -47,14 +46,19 @@
 		}
 	
 	public class DoneButtonClick implements ActionListener{
-	
+
+
 		@Override
 		public void actionPerformed(ActionEvent click) {
+			
 			taskValue = taskName.getText();
 			System.out.println(taskValue);
 			mainWindow.popup.setVisible(false);
 			mainWindow.popup.dispose();
-			DrawRect.createAndShowGui();
+		//	DrawRect.createAndShowGui();
+			task newTask = new task(taskValue, priorityState);
+			
+			
 		}
 			// TODO Auto-generated method stub
 			
@@ -63,21 +67,22 @@
 		
 		@Override
 		public void actionPerformed(ActionEvent click) {
-			high = true;
+			priorityState = "high";
 		}
 		}
 	public class MediumButtonClick implements ActionListener{
 		
 		@Override
 		public void actionPerformed(ActionEvent click) {
-			medium = true;
+			priorityState = "medium";
 		}
 		}
 	public class LowButtonClick implements ActionListener{
 		
 		@Override
 		public void actionPerformed(ActionEvent click) {
-			low = true;
+			priorityState = "low";
+
 		}
 		}
 	}
