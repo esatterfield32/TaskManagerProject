@@ -5,6 +5,10 @@ import javax.swing.*;
 
 public class DrawRect extends JPanel {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private static final int RECT_X = 20;
 	private static final int RECT_Y = RECT_X;
 	private static final int RECT_WIDTH = 100;
@@ -19,7 +23,7 @@ public class DrawRect extends JPanel {
 			priorityValue[i] = popupwindow.priorityState;
 			taskValue[i] = popupwindow.taskValue;
 			System.out.println(popupwindow.priorityState);
-			System.out.println(taskValue[i]);
+			System.out.println(taskValue[i] + "Im in the rect class");
 
 			
 
