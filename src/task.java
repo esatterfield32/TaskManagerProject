@@ -1,25 +1,36 @@
 
 public class task {
-	private String[] savedTaskNames;
-	private String[] savedPriorityValues;
+	private String taskName;
+	private String priority;
 
-	
-	public task(String taskName, String taskPriority) {
-		//System.out.println(taskName +  taskPriority);
-	/*	this.taskTitle = taskName;
-	    this.taskPriorityLevel = taskPriority;
-		saveValues(taskName,taskPriority);*/
-		System.out.println("I got here");
-
+	public task(String taskName, String priority){
+		this.taskName = taskName;
+		this.priority = priority;
 	}
-
-	private void saveValues(String taskNameSave, String taskPrioritySave) {
-		for(int i = 0; i < 50; i++) {
-			savedTaskNames[i] = taskNameSave;
-			savedPriorityValues[i] = taskPrioritySave;
-			//System.out.println(savedTaskNames[i] + savedPriorityValues[i]+ "got here");
-			
+	
+	public void parsePriority(String priority) {
+		priority = getPriority()
+		if (priority.equals("high")){
+			System.out.println("red box");
+		}
+		else if (priority.equals("medium")) {
+			System.out.println("yellow box");
+		}
+		else {
+			System.out.println("green box");
 		}
 		
 	}
+	
+	public String toString() {
+        return "Name = " + this.taskName + ", priority = " + this.priority;
+    }
+	
+	public String getPriority(){
+		
+		prioritystate = popupwindow.priorityState;
+		
+		return  prioritystate;
+	}
+	
 }

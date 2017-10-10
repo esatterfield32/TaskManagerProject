@@ -15,7 +15,8 @@ public class popupwindow extends JFrame{
 	public JButton lowPriority;
 	public static String taskValue;
 	private JTextField taskName;
-	public static String priorityState;
+	public String priorityState;
+	
 	public popupwindow() {
 
 		setLayout(new FlowLayout());
@@ -53,23 +54,18 @@ public class popupwindow extends JFrame{
 		public void actionPerformed(ActionEvent click) {
 
 			taskValue = taskName.getText();
-			System.out.println("done");
 			System.out.println(taskValue);
 			mainWindow.popup.setVisible(false);
 			mainWindow.popup.dispose();
-			//System.out.println("got here");
 
-			ArrayList<task> tasks = new ArrayList<task>();
-			System.out.println("got here");
-			tasks.add(new task(taskValue, priorityState));
-			//System.out.println("Value:" + taskValue + "Priority:" + priorityState);
-			System.out.println(tasks.toString());
-
-		/*	for(task tsk : tasks){
-				System.out.println(tsk);
-
-			}*/
-
+			MainClass.tasks.add(new task(taskValue, priorityState));
+			System.out.println(MainClass.tasks.size());
+			int i = 0;
+			for (task p : MainClass.tasks) {
+				ArrayList<task> tasks = new ArrayList<task>();
+				//display tasks on board
+				p.parsePriority(priorityState);
+			}
 
 		}
 		// TODO Auto-generated method stub

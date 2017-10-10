@@ -14,20 +14,8 @@ public class DrawRect extends JPanel {
 	private static final int RECT_WIDTH = 100;
 	private static final int RECT_HEIGHT = RECT_WIDTH;
 
-	private String[] taskValue;
-	private String[] priorityValue;
 	@Override
 	protected void paintComponent(Graphics g) {
-
-		for (int i = 0; i <10; i++) {
-			priorityValue[i] = popupwindow.priorityState;
-			taskValue[i] = popupwindow.taskValue;
-			System.out.println(popupwindow.priorityState);
-			System.out.println(taskValue[i] + "Im in the rect class");
-
-			
-
-
 			g.fillRect(RECT_X, RECT_Y, RECT_WIDTH, RECT_HEIGHT);
 			g.setColor(Color.black);
 		}
