@@ -8,10 +8,13 @@ public class task {
 		this.priority = priority;
 	}
 	
-	public void parsePriority(String priority) {
-		priority = getPriority()
+	public void parsePriority() {
+
 		if (priority.equals("high")){
 			System.out.println("red box");
+			//call the drawRect class method draw red rectangle
+			System.out.println("got here");
+			
 		}
 		else if (priority.equals("medium")) {
 			System.out.println("yellow box");
@@ -26,11 +29,5 @@ public class task {
         return "Name = " + this.taskName + ", priority = " + this.priority;
     }
 	
-	public String getPriority(){
-		
-		prioritystate = popupwindow.priorityState;
-		
-		return  prioritystate;
-	}
 	
 }

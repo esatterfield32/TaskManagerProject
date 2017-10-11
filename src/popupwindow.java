@@ -64,7 +64,7 @@ public class popupwindow extends JFrame{
 			for (task p : MainClass.tasks) {
 				ArrayList<task> tasks = new ArrayList<task>();
 				//display tasks on board
-				p.parsePriority(priorityState);
+				p.parsePriority();
 			}
 
 		}
