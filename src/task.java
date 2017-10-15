@@ -12,6 +12,8 @@ public class task {
 
 		if (priority.equals("high")){
 			System.out.println("red box");
+			DrawRect.createAndShowGui();
+			DrawRect.redRectangle(MainClass.gui);
 			//call the drawRect class method draw red rectangle
 			System.out.println("got here");
 			

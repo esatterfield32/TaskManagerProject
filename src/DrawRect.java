@@ -27,9 +27,9 @@ public class DrawRect extends JPanel {
 	}
 	
 
-	public void redRectangle(Graphics g) {
-		super.paintComponent(g);
-		Graphics2D g2= (Graphics2D)g;
+	public void redRectangle(Graphics m) {
+		super.paintComponent(m);
+		Graphics2D g2= (Graphics2D)m;
 		Shape redRect = new Rectangle2D.Float(RECT_X, RECT_Y, RECT_WIDTH, RECT_HEIGHT);
 		g2.setColor(Color.RED);
 		g2.draw(redRect);

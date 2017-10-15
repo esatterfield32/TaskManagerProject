@@ -11,6 +11,7 @@ public class mainWindow extends JFrame{
 	private JTextField textfield;
 	private JButton button;
 	public static popupwindow popup;
+	
 	public mainWindow () {
 		setLayout(new FlowLayout());
 		label = new JLabel("Team organization");
